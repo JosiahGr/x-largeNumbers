@@ -4,12 +4,13 @@ import multiply from '../modules/x-largeNumbers';
 
 describe('#multiply', () => {
   test('for small numbers', () => {
-    expect(multiply('2', '2', '2')).toEqual('8');
-    expect(multiply('3', '3', '4')).toEqual('36');
-    expect(multiply('10', '10', '2')).toEqual('200');
+    expect(multiply('2', '2')).toEqual('8');
+    expect(multiply('3', '3')).toEqual('36');
+    expect(multiply('10', '10')).toEqual('200');
   });
   test('for edge cases', () => {
-    expect(multiply('a', '2', '2')).toEqual('NaN');
+    expect(multiply('a', '2')).toEqual('NaN');
+    expect(multiply('0', '2')).toEqual('0');
   });
   test('for really large numbers', () => {
     expect(multiply('222222222', '222')).toEqual();
