@@ -13,8 +13,13 @@ describe('#multiply', () => {
     expect(multiply('0', '2')).toEqual('0');
   });
   test('for really large numbers', () => {
-    expect(multiply('222222222', '222')).toEqual();
-    expect(multiply('222222222', '500')).toEqual();
-    expect(multiply('222222222', '200')).toEqual();
+    expect(multiply('222222222', '222')).toEqual('49333333284');
+    expect(multiply('222222222', '500')).toEqual('111111111000');
+    expect(multiply('222222222', '200')).toEqual('44444444400');
+  });
+  test('for really-REALLY large numbers', () => {
+    expect(multiply('2234234453453454352222', '22223435234534534534')).toEqual('49333333284');
+    expect(multiply('22234534534345345345222', '534534534534500')).toEqual('111111111000');
+    expect(multiply('22345345343453453454352222', '24564565465462342342300')).toEqual('44444444400');
   });
 });
