@@ -6,7 +6,7 @@ describe('#multiply', () => {
   test('for small numbers', () => {
     expect(multiply('2', '2')).toEqual('4');
     expect(multiply('3', '3')).toEqual('9');
-    expect(multiply('10', '10')).toEqual('100');
+    expect(multiply('', '10')).toEqual('0');
   });
   test('for edge cases', () => {
     expect(multiply('a', '2')).toEqual('NaN');

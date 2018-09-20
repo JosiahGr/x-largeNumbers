@@ -4,10 +4,10 @@ export default function multiply(a, b) {
   const numA = parseInt(a, 10);
   const numB = parseInt(b, 10);
   if (a === '') {
-    return `${numB}`;
+    return '0';
   }
   if (b === '') {
-    return `${numA}`;
+    return '0';
   }
   const product = numA * numB;
   
