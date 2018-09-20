@@ -3,6 +3,12 @@
 export default function multiply(a, b) {
   const numA = parseInt(a, 10);
   const numB = parseInt(b, 10);
+  if (a === '') {
+    return '0';
+  }
+  if (b === '') {
+    return '0';
+  }
   const product = numA * numB;
   
   function toFixed(num) {
@@ -23,8 +29,7 @@ export default function multiply(a, b) {
     }
     return x;
   }
-
-  toFixed(product);
-
-  return `${product}`;
+  
+  const answer = toFixed(product);
+  return `${answer}`;
 }
